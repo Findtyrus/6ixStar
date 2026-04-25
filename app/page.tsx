@@ -95,7 +95,7 @@ const rosterSpots = [
   {
     name: "Amani Elfadil",
     position: "TE",
-    bio: "6'4\" | 235 lbs",
+    bio: "6'4\" | 235 lbs | X: @amani_elfadil",
     image: "/athlete-amani-elfadil.png",
   },
 ];
