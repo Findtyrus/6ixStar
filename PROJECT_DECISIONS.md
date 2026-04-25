@@ -23,3 +23,5 @@
 - Added Eli Bertrand with award and single-game tackle highlight to support performance-first recruiting copy.
 - Added Ehigie Aliu-Otokiti profile card with height/weight and social handle.
 - Added Deondre Cunningham as an Edge Rusher profile with size and social handle.
+- Added Allen Sieni profile card with defensive back designation and social handle.
+- Added Amani Elfadil profile card with tight end position and size details.

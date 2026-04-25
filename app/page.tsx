@@ -86,6 +86,18 @@ const rosterSpots = [
     bio: "6'3\" | 250 lbs | X: @Deondrec22",
     image: "/athlete-deondre-cunningham.png",
   },
+  {
+    name: "Allen Sieni",
+    position: "Defensive Back",
+    bio: "X: @siene_allen",
+    image: "/athlete-allen-sieni.png",
+  },
+  {
+    name: "Amani Elfadil",
+    position: "TE",
+    bio: "6'4\" | 235 lbs",
+    image: "/athlete-amani-elfadil.png",
+  },
 ];
 
 export default function Home() {
