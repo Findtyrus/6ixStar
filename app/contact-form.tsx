@@ -19,7 +19,7 @@ export default function ContactForm() {
     const inquiryType = String(formData.get("inquiryType") || "").trim();
     const message = String(formData.get("message") || "").trim();
 
-    const subject = encodeURIComponent(`6ixStar Contact Form: ${inquiryType || "General Inquiry"}`);
+    const subject = encodeURIComponent(`SixStar Contact Form: ${inquiryType || "General Inquiry"}`);
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nInquiry Type: ${inquiryType}\n\nMessage:\n${message}`,
     );
@@ -74,7 +74,7 @@ export default function ContactForm() {
       <textarea
         name="message"
         rows={5}
-        placeholder="Tell us how 6ixStar Sports can help..."
+        placeholder="Tell us how SixStar Sports can help..."
         required
         className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-white/50"
       />

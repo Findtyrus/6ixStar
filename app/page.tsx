@@ -56,6 +56,18 @@ const rosterSpots = [
     bio: "6'3\" | 290 lbs | Bounce back from Mississippi State | X: @Calebb_45",
     image: "/athlete-caleb-bryant.png",
   },
+  {
+    name: "Caleb Williams",
+    position: "Junior",
+    bio: "Southern Miss | X: @IamCW_",
+    image: "/athlete-caleb-williams.png",
+  },
+  {
+    name: "Mekhi Brown",
+    position: "LB",
+    bio: "6'3\" | 205 lbs | 168 career tackles | 26 TFLs | 17 sacks | 2 INTs | X: @__mekhiiii__",
+    image: "/athlete-mekhi-brown.png",
+  },
 ];
 
 export default function Home() {
@@ -64,7 +76,7 @@ export default function Home() {
       <section className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 pb-20 pt-10 md:px-10">
         <header className="flex flex-wrap items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="relative flex h-20 w-20 items-center justify-center" aria-label="6ixStar Sports logo">
+            <div className="relative flex h-20 w-20 items-center justify-center" aria-label="SixStar Sports logo">
               <span className="select-none text-[5.5rem] font-black leading-none text-white">6</span>
               <span className="pointer-events-none absolute left-[52%] top-[62%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black p-[3px] text-[1.15rem] leading-none text-white">
                 ★
@@ -72,7 +84,7 @@ export default function Home() {
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.28em] text-zinc-400">NIL Football Agency</p>
-              <h1 className="text-2xl font-semibold tracking-tight">6ixStar Sports</h1>
+              <h1 className="text-2xl font-semibold tracking-tight">SixStar Sports</h1>
             </div>
           </div>
           <nav className="flex gap-3 text-sm text-zinc-200">
@@ -90,7 +102,7 @@ export default function Home() {
             Building elite football NIL opportunities for tomorrow&apos;s stars.
           </h2>
           <p className="mt-6 max-w-2xl text-base text-zinc-300 md:text-lg">
-            6ixStar Sports represents football athletes with modern NIL strategy, premium brand partnerships, and long-term career development.
+            SixStar Sports represents football athletes with modern NIL strategy, premium brand partnerships, and long-term career development.
           </p>
         </div>
       </section>
@@ -150,7 +162,7 @@ export default function Home() {
 
       <section id="contact" className="border-t border-white/10 bg-black">
         <div className="mx-auto w-full max-w-6xl px-6 py-14 md:px-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-zinc-400">Contact 6ixStar Sports</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-zinc-400">Contact SixStar Sports</p>
           <h3 className="mt-2 text-3xl font-semibold">Let&apos;s Work</h3>
           <p className="mt-3 max-w-2xl text-sm text-zinc-300">
             Reach out for athlete representation, brand opportunities, and football NIL partnerships.

@@ -1,4 +1,4 @@
-# 6ixStar Sports Website
+# SixStar Sports Website
 
 Sleek football-focused NIL agency website built with Next.js.
 
@@ -29,9 +29,9 @@ The uploaded logo is stored at `public/logo.png`.
 ```bash
 git init
 git add .
-git commit -m "Initial 6ixStar Sports website"
+git commit -m "Initial SixStar Sports website"
 git branch -M main
 git remote add origin https://github.com/<your-username>/<your-repo>.git
 git push -u origin main
 ```
-# 6ixStar
+# SixStar Sports

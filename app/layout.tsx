@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "6ixStar Sports | Football NIL Agency",
-  description: "Sleek football NIL agency website for 6ixStar Sports.",
+  title: "SixStar Sports | Football NIL Agency",
+  description: "Sleek football NIL agency website for SixStar Sports.",
 };
 
 export default function RootLayout({

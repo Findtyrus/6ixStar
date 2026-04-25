@@ -1,4 +1,4 @@
-# 6ixStar Sports Project Decisions
+# SixStar Sports Project Decisions
 
 ## 2026-04-01
 
@@ -19,3 +19,4 @@
 - Added AJ Howard with a stat-focused profile format to support defensive performance highlights.
 - Added Caleb Bryant with transfer-comeback context in the bio line to support recruiting narrative.
 - Added a dedicated contact form section connected to the Contact nav anchor with email-draft submit behavior.
+- Added Caleb Williams and Mekhi Brown athlete cards with uploaded images and profile stats.
