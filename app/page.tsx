@@ -68,6 +68,24 @@ const rosterSpots = [
     bio: "6'3\" | 205 lbs | 168 career tackles | 26 TFLs | 17 sacks | 2 INTs | X: @__mekhiiii__",
     image: "/athlete-mekhi-brown.png",
   },
+  {
+    name: "Eli Bertrand",
+    position: "LB",
+    bio: "2025 Sun Conference Linebacker of the Year | 17 tackles in one game | 6'0\" | 190 lbs | X: @Elidag0at21",
+    image: "/athlete-eli-bertrand.png",
+  },
+  {
+    name: "Ehigie Aliu-Otokiti",
+    position: "DL",
+    bio: "6'2\" | 285 lbs | X: @EhigieAO",
+    image: "/athlete-ehigie-aliu-otokiti.png",
+  },
+  {
+    name: "Deondre Cunningham",
+    position: "Edge Rusher",
+    bio: "6'3\" | 250 lbs | X: @Deondrec22",
+    image: "/athlete-deondre-cunningham.png",
+  },
 ];
 
 export default function Home() {

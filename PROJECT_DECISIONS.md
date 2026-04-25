@@ -20,3 +20,6 @@
 - Added Caleb Bryant with transfer-comeback context in the bio line to support recruiting narrative.
 - Added a dedicated contact form section connected to the Contact nav anchor with email-draft submit behavior.
 - Added Caleb Williams and Mekhi Brown athlete cards with uploaded images and profile stats.
+- Added Eli Bertrand with award and single-game tackle highlight to support performance-first recruiting copy.
+- Added Ehigie Aliu-Otokiti profile card with height/weight and social handle.
+- Added Deondre Cunningham as an Edge Rusher profile with size and social handle.
