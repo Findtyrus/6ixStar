@@ -98,6 +98,42 @@ const rosterSpots = [
     bio: "6'4\" | 235 lbs | X: @amani_elfadil",
     image: "/athlete-amani-elfadil.png",
   },
+  {
+    name: "Winner Ndjibu",
+    position: "OT/OG",
+    bio: "Iowa Western CC NJCAA 25 Natty champ 3 star| 6'5\" | 312 lbs | X: @ndjibu_winner",
+    image: "/IMG_9563.JPG",
+  },
+  {
+    name: "Dieme Lipanda",
+    position: "IOL/OG",
+    bio: "Iowa Western CC NJCAA 25 Natty champ | X: @dieme_lipanda",
+    image: "/IMG_9564.jpeg",
+  },
+  {
+    name: "Eli Ladu",
+    position: "WR",
+    bio: "Iowa Western CC NJCAA 25 Natty champ | 6'0\" | 180 lbs | X: @EliLadu",
+    image: "/IMG_9565.jpeg",
+  },
+  {
+    name: "Khyree Brown",
+    position: "WR",
+    bio: "Kilgore CC | 6'5\" | 215 lbs | X: @Khyree004",
+    image: "/IMG_9566.jpeg",
+  },
+  {
+    name: "Jaylen Johnson",
+    position: "WR/OWR",
+    bio: "Hinds CC | 5'11\" | 175 lbs | 4.4 40 Yd | X: @imjaylenjohnson",
+    image: "/IMG_9567.JPG",
+  },
+  {
+    name: "Jaiden hicks",
+    position: "Safety",
+    bio: "Highland CC | 6'2\" | 200 lbs | X: @Jaidenhicks8",
+    image: "/IMG_9571.JPG",
+  },
 ];
 
 export default function Home() {
