@@ -38,7 +38,7 @@ export default function ContactForm() {
           type="text"
           placeholder="Full Name"
           required
-          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-gold"
+          className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
         />
         <input
           name="email"
@@ -46,7 +46,7 @@ export default function ContactForm() {
           type="email"
           placeholder="Email Address"
           required
-          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-gold"
+          className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
         />
       </div>
 
@@ -56,14 +56,14 @@ export default function ContactForm() {
           aria-label="Phone number"
           type="tel"
           placeholder="Phone Number"
-          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-gold"
+          className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
         />
         <select
           name="inquiryType"
           aria-label="Inquiry type"
           required
           defaultValue=""
-          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm text-zinc-300 outline-none transition focus:border-gold"
+          className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
         >
           <option value="" disabled>
             Inquiry Type
@@ -81,17 +81,17 @@ export default function ContactForm() {
         rows={5}
         placeholder="Tell us how SixStar Sports can help..."
         required
-        className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-gold"
+        className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
       />
 
       <button
         type="submit"
-        className="inline-flex w-full items-center justify-center rounded-xl bg-gold px-7 py-3.5 text-sm font-semibold text-black transition hover:brightness-110 md:w-auto"
+        className="bg-ink px-7 py-3.5 text-sm font-medium text-paper transition hover:bg-ink/85 md:justify-self-start"
       >
         Send Inquiry
       </button>
 
-      {status ? <p role="status" className="text-sm text-zinc-400">{status}</p> : null}
+      {status ? <p role="status" className="text-sm text-muted">{status}</p> : null}
     </form>
   );
 }
