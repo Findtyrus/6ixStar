@@ -1,257 +1,152 @@
-import Image from "next/image";
+import SiteFooter from "./site-footer";
+import SiteHeader from "./site-header";
 import ContactForm from "./contact-form";
+import RosterGrid from "./roster-grid";
+import { groups, roster } from "./roster";
 
-const rosterSpots = [
+const services = [
   {
-    name: "Ruben Smith",
-    position: "OG / OT",
-    bio: "6'6\" | 315 lbs | Tyler Junior College | @ThunderSmith76",
-    image: "/athlete-ruben-smith.png",
+    title: "Athlete Branding",
+    body: "Personal brand strategy, social positioning, and content direction built around each athlete.",
   },
   {
-    name: "Amare Johnson",
-    position: "Center / OG",
-    bio: "6'3\" | Kentucky Christian University | X: @_yxngin97",
-    image: "/athlete-amare-johnson.png",
+    title: "NIL Partnerships",
+    body: "High-value local and national sponsorship outreach aligned with player goals and audience.",
   },
   {
-    name: "Glendarious Ford",
-    position: "CB / S",
-    bio: "6'1\" | 180 lbs | Southwest CC | X: @glendarixus",
-    image: "/athlete-glendarious-ford.png",
+    title: "Career Development",
+    body: "Long-term support for recruiting, media prep, and post-college professional positioning.",
   },
-  {
-    name: "Khaleb Bridges",
-    position: "5'11\" | 190 lbs",
-    bio: "Citdeal | X: @khaleb2x4",
-    image: "/athlete-khaleb-bridges.png",
-  },
-  {
-    name: "Jabari Murphy",
-    position: "RB",
-    bio: "6'2\" | 225 lbs | X: @JabariMurphy",
-    image: "/athlete-jabari-murphy.png",
-  },
-  {
-    name: "Damion Miller",
-    position: "CB",
-    bio: "6'3\" | 200 lbs | Southwest CC | X: @DamionM2005",
-    image: "/athlete-damion-miller.png",
-  },
-  {
-    name: "Tahj Williby",
-    position: "WR",
-    bio: "6'4\" | 195 lbs | X: @TahjWilliby_10",
-    image: "/athlete-tahj-williby.png",
-  },
-  {
-    name: "AJ Howard",
-    position: "Defensive Back",
-    bio: "40 tackles | 27 solo | 2 TFL | 1 FF | 10 PBUs | X: @MrLocksmith__",
-    image: "/athlete-aj-howard.png",
-  },
-  {
-    name: "Caleb Bryant",
-    position: "DT / Edge",
-    bio: "6'3\" | 290 lbs | Bounce back from Mississippi State | X: @Calebb_45",
-    image: "/athlete-caleb-bryant.png",
-  },
-  {
-    name: "Caleb Williams",
-    position: "Junior",
-    bio: "Southern Miss | X: @IamCW_",
-    image: "/athlete-caleb-williams.png",
-  },
-  {
-    name: "Mekhi Brown",
-    position: "LB",
-    bio: "6'3\" | 205 lbs | 168 career tackles | 26 TFLs | 17 sacks | 2 INTs | X: @__mekhiiii__",
-    image: "/athlete-mekhi-brown.png",
-  },
-  {
-    name: "Eli Bertrand",
-    position: "LB",
-    bio: "2025 Sun Conference Linebacker of the Year | 17 tackles in one game | 6'0\" | 190 lbs | X: @Elidag0at21",
-    image: "/athlete-eli-bertrand.png",
-  },
-  {
-    name: "Ehigie Aliu-Otokiti",
-    position: "DL",
-    bio: "6'2\" | 285 lbs | X: @EhigieAO",
-    image: "/athlete-ehigie-aliu-otokiti.png",
-  },
-  {
-    name: "Deondre Cunningham",
-    position: "Edge Rusher",
-    bio: "6'3\" | 250 lbs | X: @Deondrec22",
-    image: "/athlete-deondre-cunningham.png",
-  },
-  {
-    name: "Allen Sieni",
-    position: "Defensive Back",
-    bio: "X: @siene_allen",
-    image: "/athlete-allen-sieni.png",
-  },
-  {
-    name: "Amani Elfadil",
-    position: "TE",
-    bio: "6'4\" | 235 lbs | X: @amani_elfadil",
-    image: "/athlete-amani-elfadil.png",
-  },
-  {
-    name: "Winner Ndjibu",
-    position: "OT/OG",
-    bio: "Iowa Western CC NJCAA 25 Natty champ 3 star| 6'5\" | 312 lbs | X: @ndjibu_winner",
-    image: "/IMG_9563.JPG",
-  },
-  {
-    name: "Dieme Lipanda",
-    position: "IOL/OG",
-    bio: "Iowa Western CC NJCAA 25 Natty champ | X: @dieme_lipanda",
-    image: "/IMG_9564.jpeg",
-  },
-  {
-    name: "Eli Ladu",
-    position: "WR",
-    bio: "Iowa Western CC NJCAA 25 Natty champ | 6'0\" | 180 lbs | X: @EliLadu",
-    image: "/IMG_9565.jpeg",
-  },
-  {
-    name: "Khyree Brown",
-    position: "WR",
-    bio: "Kilgore CC | 6'5\" | 215 lbs | X: @Khyree004",
-    image: "/IMG_9566.jpeg",
-  },
-  {
-    name: "Jaylen Johnson",
-    position: "WR/OWR",
-    bio: "Hinds CC | 5'11\" | 175 lbs | 4.4 40 Yd | X: @imjaylenjohnson",
-    image: "/IMG_9567.JPG",
-  },
-  {
-    name: "Jaiden hicks",
-    position: "Safety",
-    bio: "Highland CC | 6'2\" | 200 lbs | X: @Jaidenhicks8",
-    image: "/IMG_9571.JPG",
-  },
-  {
-    name: 'Tyler "T.J." Harold',
-    position: "Defensive Lineman",
-    bio: "Tyler Junior College D1 Bounce Back | 6'1\" | 290 lbs | X: @TJHarold2023",
-    image: "/IMG_8262.jpeg",
-  },
-  {
-    name: "Zechariah Ladu",
-    position: "FS/SS/N",
-    bio: "JUCO Transfer 3.5 GPA | 6'2\" | 200 lbs | X: @LaduZach",
-    image: "/IMG_5687.JPG",
-  },
+];
+
+const stats = [
+  { value: String(roster.length), label: "Athletes represented" },
+  { value: String(groups.length), label: "Position groups" },
+  { value: "100%", label: "Football focused" },
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050505] text-white">
-      <section className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 pb-20 pt-10 md:px-10">
-        <header className="flex flex-wrap items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <div className="relative flex h-20 w-20 items-center justify-center" aria-label="SixStar Sports logo">
-              <span className="select-none text-[5.5rem] font-black leading-none text-white">6</span>
-              <span className="pointer-events-none absolute left-[52%] top-[62%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black p-[3px] text-[1.15rem] leading-none text-white">
-                ★
-              </span>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-zinc-400">NIL Football Agency</p>
-              <h1 className="text-2xl font-semibold tracking-tight">SixStar Sports</h1>
-            </div>
-          </div>
-          <nav className="flex gap-3 text-sm text-zinc-200">
-            <a href="#about" className="rounded-full border border-white/15 px-4 py-2 transition hover:border-white/50">About</a>
-            <a href="#roster" className="rounded-full border border-white/15 px-4 py-2 transition hover:border-white/50">Roster</a>
-            <a href="#contact" className="rounded-full border border-white/15 px-4 py-2 transition hover:border-white/50">Contact</a>
-          </nav>
-        </header>
+    <main className="min-h-screen bg-background text-white">
+      <SiteHeader />
 
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-8 md:p-12">
-          <p className="mb-3 inline-flex rounded-full border border-white/20 px-3 py-1 text-xs tracking-[0.2em] text-zinc-300">
-            FOOTBALL. BRAND. LEGACY.
+      <section id="top" className="relative overflow-hidden">
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.14),transparent_60%)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-20 md:px-10 md:pb-28 md:pt-28">
+          <p className="mb-6 inline-flex rounded-full border border-gold/40 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-gold">
+            Football NIL Agency
           </p>
-          <h2 className="max-w-3xl text-4xl font-semibold leading-tight md:text-6xl">
-            Building elite football NIL opportunities for tomorrow&apos;s stars.
-          </h2>
-          <p className="mt-6 max-w-2xl text-base text-zinc-300 md:text-lg">
-            SixStar Sports represents football athletes with modern NIL strategy, premium brand partnerships, and long-term career development.
+          <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
+            Football. Brand. <span className="text-gold">Legacy.</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-zinc-300 md:text-xl">
+            Building elite football NIL opportunities for tomorrow&apos;s stars. Modern NIL strategy, premium brand
+            partnerships, and long-term career development.
           </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="#roster"
+              className="rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition hover:bg-zinc-200"
+            >
+              Meet the roster
+            </a>
+            <a
+              href="#contact"
+              className="rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold transition hover:border-white/60"
+            >
+              Work with us
+            </a>
+            <a
+              href="mailto:sixstarsports79@gmail.com"
+              className="rounded-full border border-gold/50 px-7 py-3.5 text-sm font-semibold text-gold transition hover:bg-gold hover:text-black"
+            >
+              Email us
+            </a>
+          </div>
+
+          <dl className="mt-16 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <dd className="text-3xl font-semibold md:text-4xl">{s.value}</dd>
+                <dt className="mt-1 text-xs uppercase tracking-[0.15em] text-zinc-400">{s.label}</dt>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
       <section id="about" className="border-y border-white/10 bg-zinc-950/70">
-        <div className="mx-auto grid w-full max-w-6xl gap-6 px-6 py-14 md:grid-cols-3 md:px-10">
-          <article className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <h3 className="text-lg font-semibold">Athlete Branding</h3>
-            <p className="mt-3 text-sm text-zinc-300">Personal brand strategy, social positioning, and content direction built around each athlete.</p>
-          </article>
-          <article className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <h3 className="text-lg font-semibold">NIL Partnerships</h3>
-            <p className="mt-3 text-sm text-zinc-300">High-value local and national sponsorship outreach aligned with player goals and audience.</p>
-          </article>
-          <article className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <h3 className="text-lg font-semibold">Career Development</h3>
-            <p className="mt-3 text-sm text-zinc-300">Long-term support for recruiting, media prep, and post-college professional positioning.</p>
-          </article>
+        <div className="mx-auto w-full max-w-6xl px-6 py-20 md:px-10">
+          <p className="text-xs uppercase tracking-[0.25em] text-gold">About</p>
+          <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+            One agency. Built around football athletes.
+          </h2>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {services.map((s, i) => (
+              <article
+                key={s.title}
+                className="rounded-2xl border border-white/10 bg-black/40 p-7 transition hover:border-gold/40"
+              >
+                <span className="text-sm font-semibold text-gold">0{i + 1}</span>
+                <h3 className="mt-4 text-xl font-semibold">{s.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-zinc-300">{s.body}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section id="roster" className="mx-auto w-full max-w-6xl px-6 py-16 md:px-10">
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+      <section id="roster" className="mx-auto w-full max-w-6xl px-6 py-20 md:px-10">
+        <p className="text-xs uppercase tracking-[0.25em] text-gold">Current Roster</p>
+        <h2 className="mb-8 mt-3 text-3xl font-semibold tracking-tight md:text-4xl">Football Athletes</h2>
+        <RosterGrid />
+      </section>
+
+      <section id="contact" className="border-t border-white/10 bg-zinc-950/70">
+        <div className="mx-auto grid w-full max-w-6xl gap-12 px-6 py-20 md:grid-cols-[1fr_1.4fr] md:px-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-zinc-400">Current Roster</p>
-            <h3 className="mt-2 text-3xl font-semibold">Football Athletes</h3>
-          </div>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {rosterSpots.map((player) => (
-            <article key={player.name} className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/70">
-              {player.image ? (
-                <div className="relative aspect-[4/5] w-full overflow-hidden border-b border-white/10">
-                  <Image
-                    src={player.image}
-                    alt={`${player.name} athlete photo`}
-                    width={1200}
-                    height={1600}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              ) : (
-                <div className="flex h-44 items-center justify-center border-b border-white/10 bg-gradient-to-br from-zinc-800 to-zinc-950 text-xs uppercase tracking-[0.2em] text-zinc-300">
-                  Player photo placeholder
-                </div>
-              )}
-              <div className="space-y-2 p-5">
-                <h4 className="text-lg font-semibold">{player.name}</h4>
-                <p className="text-sm text-zinc-400">{player.position}</p>
-                <p className="text-sm text-zinc-300">{player.bio}</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-gold">Contact</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">Let&apos;s work.</h2>
+            <p className="mt-4 text-zinc-300">
+              Reach out for athlete representation, brand opportunities, and football NIL partnerships.
+            </p>
+            <div className="mt-8 space-y-3 text-sm">
+              <p>
+                <span className="block text-xs uppercase tracking-[0.2em] text-zinc-500">Email</span>
+                <a href="mailto:sixstarsports79@gmail.com" className="text-zinc-200 transition hover:text-gold">
+                  sixstarsports79@gmail.com
+                </a>
+              </p>
+              <p>
+                <span className="block text-xs uppercase tracking-[0.2em] text-zinc-500">Phone</span>
+                <a href="tel:+16018963344" className="text-zinc-200 transition hover:text-gold">
+                  +1 (601) 896-3344
+                </a>
+              </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <a
+                  href="mailto:sixstarsports79@gmail.com"
+                  className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 font-semibold text-black transition hover:brightness-110"
+                >
+                  <span aria-hidden="true">&#9993;</span> Email us
+                </a>
+                <a
+                  href="tel:+16018963344"
+                  className="inline-flex items-center gap-2 rounded-full border border-gold/50 px-5 py-2.5 font-semibold text-gold transition hover:bg-gold hover:text-black"
+                >
+                  <span aria-hidden="true">&#9742;</span> Call us
+                </a>
               </div>
-            </article>
-          ))}
+            </div>
+          </div>
+          <ContactForm />
         </div>
       </section>
 
-      <section id="contact" className="border-t border-white/10 bg-black">
-        <div className="mx-auto w-full max-w-6xl px-6 py-14 md:px-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-zinc-400">Contact SixStar Sports</p>
-          <h3 className="mt-2 text-3xl font-semibold">Let&apos;s Work</h3>
-          <p className="mt-3 max-w-2xl text-sm text-zinc-300">
-            Reach out for athlete representation, brand opportunities, and football NIL partnerships.
-          </p>
-          <ContactForm />
-          <div className="mt-6 text-sm text-zinc-300">
-            <p>Email: sixstarsports79@gmail.com</p>
-            <p>Phone: +1 (601) 896-3344</p>
-          </div>
-        </div>
-      </section>
+      <SiteFooter />
     </main>
   );
 }

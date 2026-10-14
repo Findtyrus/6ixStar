@@ -25,41 +25,45 @@ export default function ContactForm() {
     );
 
     window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-    setStatus("Your email draft is ready. Press send in your email app.");
+    setStatus(`Your email draft is ready. Press send in your email app, or email us directly at ${recipient}.`);
     form.reset();
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-6 grid gap-4">
+    <form onSubmit={handleSubmit} className="grid content-start gap-4">
       <div className="grid gap-4 md:grid-cols-2">
         <input
           name="name"
+          aria-label="Full name"
           type="text"
           placeholder="Full Name"
           required
-          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-white/50"
+          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-gold"
         />
         <input
           name="email"
+          aria-label="Email address"
           type="email"
           placeholder="Email Address"
           required
-          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-white/50"
+          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-gold"
         />
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
         <input
           name="phone"
+          aria-label="Phone number"
           type="tel"
           placeholder="Phone Number"
-          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-white/50"
+          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-gold"
         />
         <select
           name="inquiryType"
+          aria-label="Inquiry type"
           required
           defaultValue=""
-          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm text-zinc-300 outline-none transition focus:border-white/50"
+          className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm text-zinc-300 outline-none transition focus:border-gold"
         >
           <option value="" disabled>
             Inquiry Type
@@ -73,20 +77,21 @@ export default function ContactForm() {
 
       <textarea
         name="message"
+        aria-label="Message"
         rows={5}
         placeholder="Tell us how SixStar Sports can help..."
         required
-        className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-white/50"
+        className="rounded-xl border border-white/15 bg-zinc-900 px-4 py-3 text-sm outline-none transition focus:border-gold"
       />
 
       <button
         type="submit"
-        className="inline-flex w-full items-center justify-center rounded-xl border border-white/20 bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200 md:w-auto"
+        className="inline-flex w-full items-center justify-center rounded-xl bg-gold px-7 py-3.5 text-sm font-semibold text-black transition hover:brightness-110 md:w-auto"
       >
         Send Inquiry
       </button>
 
-      {status ? <p className="text-sm text-zinc-400">{status}</p> : null}
+      {status ? <p role="status" className="text-sm text-zinc-400">{status}</p> : null}
     </form>
   );
 }

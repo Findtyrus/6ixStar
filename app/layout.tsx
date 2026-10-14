@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,9 +12,30 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "SixStar Sports | Football NIL Agency";
+const description =
+  "SixStar Sports represents football athletes with modern NIL strategy, premium brand partnerships, and long-term career development.";
+
 export const metadata: Metadata = {
-  title: "SixStar Sports | Football NIL Agency",
-  description: "Sleek football NIL agency website for SixStar Sports.",
+  metadataBase: new URL("https://agencysixstar.com"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "SixStar Sports",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#050505",
 };
 
 export default function RootLayout({
