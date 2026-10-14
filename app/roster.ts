@@ -34,14 +34,6 @@ export const roster: Athlete[] = [
     image: "/athlete-ruben-smith.png",
   },
   {
-    name: "Amare Johnson",
-    position: "Center / OG",
-    group: "OL",
-    details: ["6'3\"", "Kentucky Christian University"],
-    x: "_yxngin97",
-    image: "/athlete-amare-johnson.png",
-  },
-  {
     name: "Winner Ndjibu",
     position: "OT / OG",
     group: "OL",
@@ -204,13 +196,6 @@ export const roster: Athlete[] = [
     group: "Skill",
     details: ["6'0\"", "180 lbs", "Redshirt Freshman"],
     image: "/athlete-omar-mejia.jpg",
-  },
-  // Position not listed on the old site; add `position` and `group` to file these properly.
-  {
-    name: "Khaleb Bridges",
-    details: ["5'11\"", "190 lbs"],
-    x: "khaleb2x4",
-    image: "/athlete-khaleb-bridges.png",
   },
   {
     name: "Caleb Williams",

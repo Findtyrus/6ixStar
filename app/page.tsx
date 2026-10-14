@@ -21,7 +21,7 @@ const services = [
 ];
 
 // Action shots for the hero strip (matched by name so reordering the roster doesn't break it).
-const heroNames = ["Winner Ndjibu", "Ruben Smith", "Elijah Hunter", "Marlos Walker", "Amare Johnson"];
+const heroNames = ["Winner Ndjibu", "Ruben Smith", "Elijah Hunter", "Marlos Walker", "Mekhi Brown"];
 const heroShots = heroNames
   .map((n) => roster.find((a) => a.name === n))
   .filter((a): a is (typeof roster)[number] & { image: string } => Boolean(a?.image));
