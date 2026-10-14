@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #faf9f7;
-  --ink: #141414;
-  --muted: #6b6a66;
-  --line: #e2e0da;
-  --tint: #efede8;
+  --paper: #0a0a0a;
+  --ink: #f5f5f5;
+  --muted: #a3a3a3;
+  --line: #262626;
+  --tint: #141414;
 }
 
 @theme inline {
@@ -15,11 +15,12 @@
   --color-line: var(--line);
   --color-tint: var(--tint);
   --font-sans: var(--font-geist-sans);
-  --font-display: var(--font-instrument-serif);
+  --font-display: var(--font-barlow-condensed);
 }
 
 html {
   scroll-behavior: smooth;
+  background: var(--paper);
 }
 
 section[id] {

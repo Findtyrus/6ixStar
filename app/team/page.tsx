@@ -17,8 +17,8 @@ export default function TeamPage() {
       <SiteHeader />
 
       <section>
-        <div className="mx-auto w-full max-w-6xl px-5 pb-12 pt-16 sm:px-8 md:pb-16 md:pt-24">
-          <h1 className="max-w-3xl font-display text-5xl leading-[1.05] tracking-tight md:text-7xl">Our team</h1>
+        <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-16 sm:px-8 md:pb-16 md:pt-24">
+          <h1 className="font-display text-6xl font-extrabold uppercase leading-none tracking-tight md:text-9xl">Our team</h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             A football-focused team working to build NIL opportunities for every athlete we represent.
           </p>
@@ -26,7 +26,7 @@ export default function TeamPage() {
       </section>
 
       <section className="border-t border-line">
-        <div className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-8 md:py-20">
           <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((m) => (
               <article key={m.name}>
@@ -40,7 +40,7 @@ export default function TeamPage() {
                       className="object-cover object-top"
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center font-display text-7xl text-muted/50">
+                    <div className="flex h-full w-full items-center justify-center font-display text-8xl font-bold text-line">
                       {m.name
                         .split(" ")
                         .map((w) => w[0])
@@ -50,8 +50,8 @@ export default function TeamPage() {
                   )}
                 </div>
                 <div className="mt-4">
-                  <h2 className="text-lg font-medium tracking-tight">{m.name}</h2>
-                  <p className="mt-0.5 text-sm text-muted">{m.title}</p>
+                  <h2 className="font-display text-3xl font-bold uppercase leading-none tracking-wide">{m.name}</h2>
+                  <p className="mt-2 font-display text-lg font-semibold uppercase tracking-wide text-muted">{m.title}</p>
                   {m.bio ? <p className="mt-3 text-sm leading-relaxed">{m.bio}</p> : null}
                   <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                     {m.instagram ? (
@@ -91,9 +91,9 @@ export default function TeamPage() {
       </section>
 
       <section className="border-t border-line bg-tint">
-        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-6 px-5 py-14 sm:px-8">
-          <h2 className="font-display text-3xl tracking-tight md:text-4xl">Want to work with SixStar?</h2>
-          <Link href="/#contact" className="bg-ink px-6 py-3 text-sm font-medium text-paper transition hover:bg-ink/85">
+        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-6 px-4 py-14 sm:px-8">
+          <h2 className="font-display text-4xl font-extrabold uppercase leading-none tracking-tight md:text-5xl">Want to work with SixStar?</h2>
+          <Link href="/#contact" className="bg-ink px-7 py-3 font-display text-xl font-bold uppercase tracking-wide text-paper transition hover:bg-ink/85">
             Get in touch
           </Link>
         </div>

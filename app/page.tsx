@@ -1,4 +1,6 @@
+import Image from "next/image";
 import ContactForm from "./contact-form";
+import { roster } from "./roster";
 import RosterGrid from "./roster-grid";
 import SiteFooter from "./site-footer";
 import SiteHeader from "./site-header";
@@ -18,42 +20,84 @@ const services = [
   },
 ];
 
+// Action shots for the hero strip (matched by name so reordering the roster doesn't break it).
+const heroNames = ["Winner Ndjibu", "Ruben Smith", "Elijah Hunter", "Marlos Walker", "Amare Johnson"];
+const heroShots = heroNames
+  .map((n) => roster.find((a) => a.name === n))
+  .filter((a): a is (typeof roster)[number] & { image: string } => Boolean(a?.image));
+const [lead, ...strip] = heroShots;
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-paper text-ink">
       <SiteHeader />
 
       <section id="top">
-        <div className="mx-auto w-full max-w-6xl px-5 pb-20 pt-20 sm:px-8 md:pb-32 md:pt-32">
-          <h1 className="max-w-4xl font-display text-6xl leading-[1.02] tracking-tight md:text-8xl">
-            Football. Brand. Legacy.
-          </h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-            SixStar Sports is a football NIL agency. We build elite opportunities for tomorrow&apos;s stars through
-            modern NIL strategy, premium brand partnerships, and long-term career development.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm">
-            <a href="#roster" className="bg-ink px-6 py-3 font-medium text-paper transition hover:bg-ink/85">
-              Meet the roster
-            </a>
-            <a
-              href="#contact"
-              className="underline decoration-line underline-offset-[6px] transition hover:decoration-ink"
-            >
-              Work with us
-            </a>
+        <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 pb-10 pt-14 sm:px-8 md:grid-cols-[1.5fr_1fr] md:items-end md:pb-14 md:pt-20">
+          <div>
+            <p className="font-display text-xl font-semibold uppercase tracking-[0.15em] text-muted">
+              College Football NIL Representation
+            </p>
+            <h1 className="mt-3 font-display text-[4.5rem] font-extrabold uppercase leading-[0.88] tracking-tight sm:text-[7rem] lg:text-[9.5rem]">
+              Football.
+              <br />
+              Brand.
+              <br />
+              Legacy.
+            </h1>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
+              SixStar Sports represents college football players. We build NIL deals, brand partnerships, and
+              long-term careers for tomorrow&apos;s stars.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3 font-display text-xl font-bold uppercase tracking-wide">
+              <a href="#roster" className="bg-ink px-7 py-3 text-paper transition hover:bg-ink/85">
+                Meet the roster
+              </a>
+              <a href="#contact" className="border-2 border-ink px-7 py-[10px] transition hover:bg-ink hover:text-paper">
+                Work with us
+              </a>
+            </div>
           </div>
+          {lead ? (
+            <div className="relative hidden aspect-[4/5] overflow-hidden bg-tint md:block">
+              <Image
+                src={lead.image}
+                alt={lead.name}
+                fill
+                priority
+                sizes="(min-width: 768px) 35vw, 100vw"
+                className="object-cover object-top"
+              />
+            </div>
+          ) : null}
+        </div>
+
+        <div className="grid grid-cols-2 gap-1 md:grid-cols-4">
+          {strip.map((a, i) => (
+            <div key={a.name} className="relative aspect-[3/4] overflow-hidden bg-tint">
+              <Image
+                src={a.image}
+                alt={a.name}
+                fill
+                priority={i < 2}
+                sizes="(min-width: 768px) 25vw, 50vw"
+                className="object-cover object-top"
+              />
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="about" className="border-t border-line">
-        <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-20 sm:px-8 md:grid-cols-[1fr_2fr] md:py-24">
-          <h2 className="font-display text-4xl tracking-tight md:text-5xl">What we do</h2>
-          <div className="divide-y divide-line border-y border-line">
+        <div className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-8 md:py-28">
+          <h2 className="font-display text-5xl font-extrabold uppercase leading-none tracking-tight md:text-7xl">
+            What we do
+          </h2>
+          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
             {services.map((s) => (
-              <div key={s.title} className="grid gap-2 py-6 sm:grid-cols-[14rem_1fr] sm:gap-8">
-                <h3 className="font-medium">{s.title}</h3>
-                <p className="leading-relaxed text-muted">{s.body}</p>
+              <div key={s.title} className="border-t-4 border-ink pt-5">
+                <h3 className="font-display text-3xl font-bold uppercase tracking-wide">{s.title}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{s.body}</p>
               </div>
             ))}
           </div>
@@ -61,37 +105,41 @@ export default function Home() {
       </section>
 
       <section id="roster" className="border-t border-line">
-        <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 md:py-24">
-          <h2 className="mb-10 font-display text-4xl tracking-tight md:text-5xl">Roster</h2>
+        <div className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-8 md:py-28">
+          <h2 className="mb-10 font-display text-5xl font-extrabold uppercase leading-none tracking-tight md:text-7xl">
+            The roster
+          </h2>
           <RosterGrid />
         </div>
       </section>
 
       <section id="contact" className="border-t border-line bg-tint">
-        <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 py-20 sm:px-8 md:grid-cols-[1fr_1.4fr] md:py-24">
+        <div className="mx-auto grid w-full max-w-7xl gap-12 px-4 py-20 sm:px-8 md:grid-cols-[1fr_1.4fr] md:py-28">
           <div>
-            <h2 className="font-display text-4xl tracking-tight md:text-5xl">Contact</h2>
+            <h2 className="font-display text-5xl font-extrabold uppercase leading-none tracking-tight md:text-7xl">
+              Get in touch
+            </h2>
             <p className="mt-5 max-w-sm leading-relaxed text-muted">
-              Reach out for athlete representation, brand opportunities, and football NIL partnerships.
+              Athletes, parents, coaches, and brands: reach out about representation, partnerships, and football NIL.
             </p>
-            <dl className="mt-8 space-y-5 text-sm">
+            <dl className="mt-8 space-y-5">
               <div>
-                <dt className="text-muted">Email</dt>
+                <dt className="font-display text-lg font-semibold uppercase tracking-wide text-muted">Email</dt>
                 <dd className="mt-1">
                   <a
                     href="mailto:sixstarsports79@gmail.com"
-                    className="text-base underline decoration-line underline-offset-4 transition hover:decoration-ink"
+                    className="text-lg underline decoration-line underline-offset-4 transition hover:decoration-ink"
                   >
                     sixstarsports79@gmail.com
                   </a>
                 </dd>
               </div>
               <div>
-                <dt className="text-muted">Phone</dt>
+                <dt className="font-display text-lg font-semibold uppercase tracking-wide text-muted">Phone</dt>
                 <dd className="mt-1">
                   <a
                     href="tel:+16018963344"
-                    className="text-base underline decoration-line underline-offset-4 transition hover:decoration-ink"
+                    className="text-lg underline decoration-line underline-offset-4 transition hover:decoration-ink"
                   >
                     +1 (601) 896-3344
                   </a>
