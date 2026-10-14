@@ -38,7 +38,7 @@ export default function ContactForm() {
           type="text"
           placeholder="Full Name"
           required
-          className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
+          className="border border-line bg-paper px-4 py-3 text-base outline-none transition placeholder:text-muted focus:border-ink"
         />
         <input
           name="email"
@@ -46,7 +46,7 @@ export default function ContactForm() {
           type="email"
           placeholder="Email Address"
           required
-          className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
+          className="border border-line bg-paper px-4 py-3 text-base outline-none transition placeholder:text-muted focus:border-ink"
         />
       </div>
 
@@ -56,23 +56,28 @@ export default function ContactForm() {
           aria-label="Phone number"
           type="tel"
           placeholder="Phone Number"
-          className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
+          className="border border-line bg-paper px-4 py-3 text-base outline-none transition placeholder:text-muted focus:border-ink"
         />
-        <select
-          name="inquiryType"
-          aria-label="Inquiry type"
-          required
-          defaultValue=""
-          className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
-        >
-          <option value="" disabled>
-            Inquiry Type
-          </option>
-          <option value="Athlete Representation">Athlete Representation</option>
-          <option value="Brand Partnership">Brand Partnership</option>
-          <option value="Media Request">Media Request</option>
-          <option value="General">General</option>
-        </select>
+        <div className="relative">
+          <select
+            name="inquiryType"
+            aria-label="Inquiry type"
+            required
+            defaultValue=""
+            className="w-full appearance-none border border-line bg-paper px-4 py-3 pr-10 text-base text-muted outline-none transition invalid:text-muted focus:border-ink valid:text-ink"
+          >
+            <option value="" disabled>
+              Inquiry Type
+            </option>
+            <option value="Athlete Representation">Athlete Representation</option>
+            <option value="Brand Partnership">Brand Partnership</option>
+            <option value="Media Request">Media Request</option>
+            <option value="General">General</option>
+          </select>
+          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-muted" aria-hidden="true">
+            &#9662;
+          </span>
+        </div>
       </div>
 
       <textarea
@@ -81,7 +86,7 @@ export default function ContactForm() {
         rows={5}
         placeholder="Tell us how SixStar Sports can help..."
         required
-        className="border border-line bg-paper px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-ink"
+        className="border border-line bg-paper px-4 py-3 text-base outline-none transition placeholder:text-muted focus:border-ink"
       />
 
       <button

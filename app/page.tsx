@@ -49,11 +49,11 @@ export default function Home() {
               SixStar Sports represents college football players. We build NIL deals, brand partnerships, and
               long-term careers for tomorrow&apos;s stars.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3 font-display text-xl font-bold uppercase tracking-wide">
-              <a href="#roster" className="bg-ink px-7 py-3 text-paper transition hover:bg-ink/85">
+            <div className="mt-8 grid grid-cols-2 gap-3 whitespace-nowrap font-display text-lg font-bold uppercase tracking-wide sm:flex sm:flex-wrap sm:text-xl">
+              <a href="#roster" className="bg-ink px-4 py-3 text-center text-paper transition hover:bg-ink/85 sm:px-7">
                 Meet the roster
               </a>
-              <a href="#contact" className="border-2 border-ink px-7 py-[10px] transition hover:bg-ink hover:text-paper">
+              <a href="#contact" className="border-2 border-ink px-4 py-[10px] text-center transition hover:bg-ink hover:text-paper sm:px-7">
                 Work with us
               </a>
             </div>
