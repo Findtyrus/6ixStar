@@ -168,6 +168,14 @@ export const roster: Athlete[] = [
     image: "/athlete-aden-willis.jpg",
   },
   {
+    name: "Jerron Blakely",
+    position: "DB",
+    group: "DB",
+    details: ["6'0\"", "185 lbs", "Junior", "31 tackles", "2 INTs"],
+    x: "JerronBlakely4",
+    image: "/athlete-jerron-blakely.jpg",
+  },
+  {
     name: "Jabari Murphy",
     position: "RB",
     group: "Skill",
