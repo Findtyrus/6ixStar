@@ -50,6 +50,14 @@ export const roster: Athlete[] = [
     image: "/IMG_9564.jpeg",
   },
   {
+    name: "Noah Juliussen",
+    position: "OT / C",
+    group: "OL",
+    details: ["6'5\"", "300 lbs", "Sophomore"],
+    x: "noahjuliussen",
+    image: "/athlete-noah-juliussen.jpg",
+  },
+  {
     name: "Caleb Bryant",
     position: "DT / Edge",
     group: "DL",
