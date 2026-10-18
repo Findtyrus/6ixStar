@@ -192,6 +192,14 @@ export const roster: Athlete[] = [
     image: "/athlete-jabari-murphy.png",
   },
   {
+    name: "Ryan Whitwell",
+    position: "RB",
+    group: "Skill",
+    details: ["6'1\"", "215 lbs", "Senior", "129 att · 1,042 yds · 15 TD", "12 rec · 76 yds"],
+    x: "RyanWhitwell3",
+    image: "/athlete-ryan-whitwell.jpg",
+  },
+  {
     name: "Amani Elfadil",
     position: "TE",
     group: "Skill",
