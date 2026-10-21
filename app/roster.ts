@@ -222,6 +222,14 @@ export const roster: Athlete[] = [
     image: "/athlete-omar-mejia.jpg",
   },
   {
+    name: "Jashawn Wyckoff",
+    position: "WR",
+    group: "Skill",
+    details: ["6'0\"", "180 lbs", "Cleveland, Ohio", "47 rec · 800 yds · 10 TD"],
+    x: "bigsgshiner",
+    image: "/athlete-jashawn-wyckoff.jpg",
+  },
+  {
     name: "Caleb Williams",
     details: ["Junior", "Southern Miss"],
     x: "IamCW_",
