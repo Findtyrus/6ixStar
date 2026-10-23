@@ -231,6 +231,8 @@ export const roster: Athlete[] = [
   },
   {
     name: "Malachi Barnes",
+    position: "OLB",
+    group: "LB",
     details: ["6'0\"", "226 lbs", "Redshirt Sophomore", "Shepherd", "33 tackles · 2.5 TFL · 2 sacks"],
     image: "/athlete-malachi-barnes.jpg",
   },
