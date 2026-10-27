@@ -230,6 +230,14 @@ export const roster: Athlete[] = [
     image: "/athlete-jashawn-wyckoff.jpg",
   },
   {
+    name: "Curtis Kimmons Jr.",
+    position: "All-Purpose Back",
+    group: "Skill",
+    details: ["6'0\"", "220 lbs", "4.48 40", "NAIA grad transfer", "Committed to UMass"],
+    x: "curtis_kimmons",
+    image: "/athlete-curtis-kimmons.jpg",
+  },
+  {
     name: "Caleb Williams",
     details: ["Junior", "Southern Miss"],
     x: "IamCW_",
