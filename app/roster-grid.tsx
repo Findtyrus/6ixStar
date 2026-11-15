@@ -63,15 +63,29 @@ export default function RosterGrid() {
               {player.details.length > 0 ? (
                 <p className="mt-1.5 line-clamp-3 text-xs leading-relaxed text-muted sm:mt-2 sm:line-clamp-none sm:text-sm">{player.details.join(" · ")}</p>
               ) : null}
-              {player.x ? (
-                <a
-                  href={`https://x.com/${player.x}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1.5 inline-block text-xs underline sm:mt-2 sm:text-sm decoration-line underline-offset-4 transition hover:decoration-ink"
-                >
-                  {`@${player.x}`}
-                </a>
+              {player.x || player.instagram ? (
+                <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-xs sm:mt-2 sm:text-sm">
+                  {player.x ? (
+                    <a
+                      href={`https://x.com/${player.x}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-line underline-offset-4 transition hover:decoration-ink"
+                    >
+                      {`X @${player.x}`}
+                    </a>
+                  ) : null}
+                  {player.instagram ? (
+                    <a
+                      href={`https://instagram.com/${player.instagram}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-line underline-offset-4 transition hover:decoration-ink"
+                    >
+                      {`IG @${player.instagram}`}
+                    </a>
+                  ) : null}
+                </div>
               ) : null}
             </div>
           </article>

@@ -12,6 +12,8 @@ export type Athlete = {
   details: string[];
   /** X (Twitter) handle without the @. */
   x?: string;
+  /** Instagram handle without the @. */
+  instagram?: string;
   /** Path in /public. Leave out to show a placeholder until a photo is available. */
   image?: string;
 };
@@ -157,6 +159,7 @@ export const roster: Athlete[] = [
     position: "DB",
     group: "DB",
     details: ["6'1\"", "180 lbs", "All-Conference", "Southeastern Fire"],
+    instagram: "tyler.island_",
     image: "/athlete-jermaine-tyler-jr.jpg",
   },
   {
