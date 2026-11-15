@@ -245,6 +245,13 @@ export const roster: Athlete[] = [
     image: "/athlete-malachi-barnes.jpg",
   },
   {
+    name: "Jordan Moultrie",
+    position: "RB",
+    group: "Skill",
+    details: ["94 att · 547 yds · 6 TD", "10 rec · 171 yds", "9 games"],
+    image: "/athlete-jordan-moultrie.jpg",
+  },
+  {
     name: "Caleb Williams",
     details: ["Junior", "Southern Miss"],
     x: "IamCW_",
