@@ -260,4 +260,11 @@ export const roster: Athlete[] = [
     details: ["6'1\"", "280 lbs", "NC Central (D1 FCS)", "Bounce back from Louisville"],
     image: "/athlete-mj-campbell.jpg",
   },
+  {
+    name: "Collin Henry",
+    position: "DB",
+    group: "DB",
+    details: ["6'3\"", "185 lbs", "Redshirt Sophomore", "Eastern Illinois", "Chaffey College"],
+    image: "/athlete-collin-henry.jpg",
+  },
 ];
