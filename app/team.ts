@@ -32,7 +32,7 @@ export const team: TeamMember[] = [
   },
   {
     name: "Chancelor Burks",
-    title: "Director of Client Relations",
+    title: "Chief Relations Officer",
     bio: "Primary point of contact for athletes and families, managing communication from first conversation to signed deal.",
     image: "/team-chancelor-burks.jpg",
     instagram: "chancelor.b6",
@@ -46,14 +46,14 @@ export const team: TeamMember[] = [
   },
   {
     name: "Peyton Rochell",
-    title: "Scouting & Recruitment Associate",
+    title: "Vice President of Scouting & Recruitment",
     bio: "Scouts talent, brings new athletes into the SixStar family, and goes on visits with them.",
     image: "/team-peyton-rochell.jpg",
     instagram: "rochellpayton",
   },
   {
     name: "Zeke Breil",
-    title: "Scouting & Recruitment Associate",
+    title: "Vice President of Scouting & Recruitment",
     bio: "Scouts talent, brings new athletes into the SixStar family, and goes on visits with them.",
     image: "/team-zeke-breil.jpg",
   },
