@@ -24,13 +24,6 @@ export const team: TeamMember[] = [
     instagram: "Jaylinjackk_",
   },
   {
-    name: "Tyrus Burton",
-    title: "Chief Financial Officer",
-    bio: "Oversees finance, accounting, and financial planning for the agency.",
-    image: "/team-tyrus-burton.jpg",
-    instagram: "findtyrus",
-  },
-  {
     name: "Chancelor Burks",
     title: "Chief Relations Officer",
     bio: "Primary point of contact for athletes and families, managing communication from first conversation to signed deal.",
@@ -38,11 +31,11 @@ export const team: TeamMember[] = [
     instagram: "chancelor.b6",
   },
   {
-    name: "Caleb Williams",
-    title: "Director of Coach Relations",
-    bio: "Builds relationships with coaches and programs, getting our athletes in front of the right staffs.",
-    image: "/team-caleb-williams.jpg",
-    instagram: "jayknowpaid",
+    name: "Tyrus Burton",
+    title: "Vice President of Finance",
+    bio: "Oversees finance, accounting, and financial planning for the agency.",
+    image: "/team-tyrus-burton.jpg",
+    instagram: "findtyrus",
   },
   {
     name: "Peyton Rochell",
@@ -56,5 +49,12 @@ export const team: TeamMember[] = [
     title: "Vice President of Scouting & Recruitment",
     bio: "Scouts talent, brings new athletes into the SixStar family, and goes on visits with them.",
     image: "/team-zeke-breil.jpg",
+  },
+  {
+    name: "Caleb Williams",
+    title: "Director of Coach Relations",
+    bio: "Builds relationships with coaches and programs, getting our athletes in front of the right staffs.",
+    image: "/team-caleb-williams.jpg",
+    instagram: "jayknowpaid",
   },
 ];
