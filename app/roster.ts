@@ -288,6 +288,7 @@ export const roster: Athlete[] = [
     position: "LB",
     group: "LB",
     details: ["6'2\"", "220 lbs", "Redshirt Junior", "UAPB", "35 tackles · 3 TFL · 3 FR · 2 PD"],
+    image: "/athlete-amajah-lewis.jpg",
   },
   {
     name: "Daniel Simon",
