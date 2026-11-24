@@ -297,4 +297,9 @@ export const roster: Athlete[] = [
     details: ["6'5\"", "260 lbs", "Northern Michigan", "18 tackles · 0.5 TFL · 2 PBU"],
     image: "/athlete-daniel-simon.jpg",
   },
+  {
+    name: "Moe Webster",
+    details: ["6'5\"", "255 lbs", "55 tackles · 10.5 TFL · 4 sacks · 4 FF · 2 FR"],
+    image: "/athlete-moe-webster.jpg",
+  },
 ];
