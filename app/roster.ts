@@ -275,4 +275,12 @@ export const roster: Athlete[] = [
     x: "SleptOnToddy",
     image: "/athlete-tyshon-mansell.jpg",
   },
+  {
+    name: "De'Adrian Hall",
+    position: "DB",
+    group: "DB",
+    details: ["5'11\"", "194 lbs", "Presbyterian", "79.3 PFF grade", "50 tackles · 5 PBU · 1 sack · 1 FF · 1 FR", "2 years of eligibility"],
+    x: "Debo_Him",
+    image: "/athlete-deadrian-hall.jpg",
+  },
 ];
