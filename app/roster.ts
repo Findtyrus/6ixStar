@@ -294,5 +294,6 @@ export const roster: Athlete[] = [
     position: "DE",
     group: "DL",
     details: ["6'5\"", "260 lbs", "Northern Michigan", "18 tackles · 0.5 TFL · 2 PBU"],
+    image: "/athlete-daniel-simon.jpg",
   },
 ];
