@@ -283,4 +283,16 @@ export const roster: Athlete[] = [
     x: "Debo_Him",
     image: "/athlete-deadrian-hall.jpg",
   },
+  {
+    name: "Amajah Lewis",
+    position: "LB",
+    group: "LB",
+    details: ["6'2\"", "220 lbs", "Redshirt Junior", "UAPB", "35 tackles · 3 TFL · 3 FR · 2 PD"],
+  },
+  {
+    name: "Daniel Simon",
+    position: "DE",
+    group: "DL",
+    details: ["6'5\"", "260 lbs", "Northern Michigan", "18 tackles · 0.5 TFL · 2 PBU"],
+  },
 ];
