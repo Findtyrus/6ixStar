@@ -267,4 +267,12 @@ export const roster: Athlete[] = [
     details: ["6'3\"", "185 lbs", "Redshirt Sophomore", "Eastern Illinois", "Chaffey College"],
     image: "/athlete-collin-henry.jpg",
   },
+  {
+    name: "Tyshon Mansell",
+    position: "WR",
+    group: "Skill",
+    details: ["6'1\"", "185 lbs", "Junior", "West Florida", "57 rec · 840 yds · 7 TD", "All-conference WR · 2 years of eligibility"],
+    x: "SleptOnToddy",
+    image: "/athlete-tyshon-mansell.jpg",
+  },
 ];
